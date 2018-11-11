@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<nmeta:Namespace xmi:version="2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Uri="http://github.com/georghinkel/ExtensibilityBenchmark" Prefix="bench" Name="ExtensibilityBenchmark" xmlns:xmi="http://www.omg.org/XMI" xmlns:nmeta="http://nmf.codeplex.com/nmeta/">
+  <ChildNamespaces Uri="http://github.com/georghinkel/ExtensibilityBenchmark/LinkedList" Prefix="linkedList" Name="LinkedList">
+    <Types xsi:type="nmeta:Class" Name="Root">
+      <References IsContainment="True" ReferenceType="nmeta:Class #//LinkedList/Item" Name="Head" />
+      <References ReferenceType="nmeta:Class #//LinkedList/Item" Name="Tail" />
+    </Types>
+    <Types xsi:type="nmeta:Class" Name="Item">
+      <References IsContainment="True" ReferenceType="nmeta:Class #//LinkedList/Item" Name="Next" />
+      <Attributes Type="nmeta:PrimitiveType http://nmf.codeplex.com/nmeta/#//Integer" Name="Value" LowerBound="1" />
+    </Types>
+  </ChildNamespaces>
+  <ChildNamespaces Uri="http://github.com/georghinkel/ExtensibilityBenchmark/Collection" Prefix="collection" Name="Collection">
+    <Types xsi:type="nmeta:Class" Name="Root">
+      <References IsContainment="True" IsOrdered="True" ReferenceType="nmeta:Class #//Collection/Item" UpperBound="-1" Name="Items" />
+    </Types>
+    <Types xsi:type="nmeta:Class" Name="Item">
+      <Attributes Type="nmeta:PrimitiveType http://nmf.codeplex.com/nmeta/#//Integer" Name="Value" LowerBound="1" />
+    </Types>
+  </ChildNamespaces>
+</nmeta:Namespace>

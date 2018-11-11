@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <RootNamespace>NMF.ExtensibilityBenchmark</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="NMF-Basics" Version="2.0.133" />
+    <PackageReference Include="NMF-Expressions" Version="2.0.133" />
+    <PackageReference Include="NMF-Expressions-Debug" Version="2.0.133">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="NMF-Repository" Version="2.0.133" />
+  </ItemGroup>
+
+</Project>
